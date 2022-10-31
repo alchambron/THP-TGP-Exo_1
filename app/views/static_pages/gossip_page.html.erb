@@ -1,7 +1,14 @@
-<h1><%= @id %></h1>
+<div class="text-center my-4">
+<h1> Gossip </h1>
+</div>
 
 <%# Creating the differents link of the user, to access their pages %>
-<a href="/user/<%= @gossips.user.first_name %>"><%= @gossips.user.first_name%></a>
-<p>Titre : <%= @gossips.title %></p>
+<div class="mx-4">
+  
+<h4>Ecrit par <a href="/user/<%= @gossips.user.first_name %>"><%= @gossips.user.first_name%></a></h2>
+<hr>
+<h5><p>Titre: <%= @gossips.title %></p></h5>
 <p><%= @gossips.content %></p>
+<hr>
 <p>Date de création : <%= @gossips.created_at  %></p>
+</div>
