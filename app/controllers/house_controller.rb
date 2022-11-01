@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class HouseController < ApplicationController
   # Initializing the view of home
   def home
     @gossips = Gossip.all
