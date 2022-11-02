@@ -10,17 +10,17 @@ class GossipsController < ApplicationController
   end
 
   def new
+    @gossip = Gossip.new
   end
 
   def create
     @gossip = Gossip.new(title: params[:title], content: params[:content], user_id: rand(1..10))
-  
+
     if @gossip.save
-        puts 'IT WWWORRRKKKKSSS'
-        redirect_to gossips_path
+      puts 'IT WWWORRRKKKKSSS'
+      redirect_to gossips_path
     else
-        puts 'NOOOOOOOOOOOOOOO'
-        redirect_to new_gossips_path
+      puts 'NOOOOOOOOOOOOOOO'
     end
   end
 
