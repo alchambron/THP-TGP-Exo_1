@@ -21,6 +21,7 @@ class GossipsController < ApplicationController
       redirect_to gossips_path
     else
       puts 'NOOOOOOOOOOOOOOO'
+      render new_gossip_path
     end
   end
 
